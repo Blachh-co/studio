@@ -1,4 +1,6 @@
-import { buildShopifyStorefrontEndpoint } from "../../blachh_frontend/lib/shopify-config";
+function buildShopifyStorefrontEndpoint(storeDomain: string) {
+  return `https://${storeDomain}/api/2024-10/graphql.json`;
+}
 
 export interface ShopifyProductOption {
   id: string;
