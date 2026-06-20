@@ -94,6 +94,11 @@ const homePage = {
     followCta: pick((d) => d.home.community.followCta),
     mascotAlt: pick((d) => d.home.community.mascotAlt),
   },
+  followBlachh: {
+    title: pick((d) => d.home.followBlachh.title),
+    instagramUrl: en.home.followBlachh.instagramUrl,
+    tiktokUrl: en.home.followBlachh.tiktokUrl,
+  },
   testimonials: {
     titleStart: pick((d) => d.home.testimonials.titleStart),
     titleAccentOne: pick((d) => d.home.testimonials.titleAccentOne),
