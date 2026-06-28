@@ -13,6 +13,7 @@ export const singletonDocs = [
   { id: "siteSettings", type: "siteSettings", title: "Site settings" },
   { id: "bannerSettings", type: "bannerSettings", title: "Announcement banner" },
   { id: "footerSettings", type: "footerSettings", title: "Footer" },
+  { id: "emailFooterSettings", type: "emailFooterSettings", title: "Email footer" },
   { id: "homePage", type: "homePage", title: "Home page" },
   { id: "aboutPage", type: "aboutPage", title: "About page" },
   { id: "contactPage", type: "contactPage", title: "Contact / wholesale page" },
@@ -47,6 +48,15 @@ export const structure: StructureResolver = (S) =>
                 .title("Footer")
                 .icon(DocumentsIcon)
                 .child(S.document().schemaType("footerSettings").documentId("footerSettings")),
+              S.listItem()
+                .id("emailFooterSettings")
+                .title("Email footer")
+                .icon(DocumentsIcon)
+                .child(
+                  S.document()
+                    .schemaType("emailFooterSettings")
+                    .documentId("emailFooterSettings"),
+                ),
             ]),
         ),
       S.listItem()

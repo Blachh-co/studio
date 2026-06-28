@@ -1,4 +1,4 @@
-// One-time script: pre-populates the 6 singleton documents in Sanity with
+// One-time script: pre-populates the singleton documents in Sanity with
 // the copy currently hardcoded in frontend/messages/{en,sv,th}.json, so the
 // Studio doesn't start with blank fields.
 //
@@ -65,6 +65,24 @@ const footerSettings = {
   _type: "footerSettings",
   links: zipArray((d) => d.footer.links),
   copyright: pick((d) => d.footer.copyright),
+};
+
+const emailFooterSettings = {
+  _id: "emailFooterSettings",
+  _type: "emailFooterSettings",
+  links: en.emailFooter.links.map((_: unknown, i: number) => ({
+    _type: "emailFooterLink",
+    _key: `email-footer-link-${i}`,
+    label: {
+      en: en.emailFooter.links[i].label,
+      th: th.emailFooter.links[i].label,
+      sv: sv.emailFooter.links[i].label,
+    },
+    href: en.emailFooter.links[i].href,
+  })),
+  supportEmail: en.emailFooter.supportEmail,
+  wholesaleEmail: en.emailFooter.wholesaleEmail,
+  copyright: pick((d) => d.emailFooter.copyright),
 };
 
 const homePage = {
@@ -271,6 +289,7 @@ const productCopy = {
 const documents: Array<{ _id: string; _type: string } & Record<string, unknown>> = [
   bannerSettings,
   footerSettings,
+  emailFooterSettings,
   homePage,
   aboutPage,
   contactPage,

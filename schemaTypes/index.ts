@@ -1,6 +1,7 @@
 import { localeString } from "./objects/localeString";
 import { localeText } from "./objects/localeText";
 import { bannerSettings } from "./documents/bannerSettings";
+import { emailFooterSettings } from "./documents/emailFooterSettings";
 import { footerSettings } from "./documents/footerSettings";
 import { homePage } from "./documents/homePage";
 import { aboutPage } from "./documents/aboutPage";
@@ -16,6 +17,7 @@ export const schemaTypes = [
   // Singleton documents
   siteSettings,
   bannerSettings,
+  emailFooterSettings,
   footerSettings,
   homePage,
   aboutPage,
