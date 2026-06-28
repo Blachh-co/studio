@@ -70,16 +70,6 @@ const footerSettings = {
 const emailFooterSettings = {
   _id: "emailFooterSettings",
   _type: "emailFooterSettings",
-  links: en.emailFooter.links.map((_: unknown, i: number) => ({
-    _type: "emailFooterLink",
-    _key: `email-footer-link-${i}`,
-    label: {
-      en: en.emailFooter.links[i].label,
-      th: th.emailFooter.links[i].label,
-      sv: sv.emailFooter.links[i].label,
-    },
-    href: en.emailFooter.links[i].href,
-  })),
   supportEmail: en.emailFooter.supportEmail,
   wholesaleEmail: en.emailFooter.wholesaleEmail,
   copyright: pick((d) => d.emailFooter.copyright),
